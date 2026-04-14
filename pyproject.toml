@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bsg-bats-fr"
+version = "0.1.0"
+description = "French-ecosystem integration layer for BSG-BATS (European bat acoustic classifier)"
+readme = "README.md"
+license = { text = "EUPL-1.2" }
+requires-python = ">=3.10"
+authors = [{ name = "Olivier Meunier" }]
+keywords = ["bioacoustics", "bats", "ecology", "classifier", "bsg-bats", "audiomoth"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "torch>=2.0",
+    "numpy>=1.24",
+    "librosa>=0.10",
+    "resampy>=0.4",
+]
+
+[project.scripts]
+bsg-bats-fr = "bsg_bats_fr.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/oliviermeunier/bsg-bats-fr"
+Upstream = "https://github.com/MnemosyneFoundation/BSG-BATS"
+Zenodo = "https://zenodo.org/records/15495676"
+Paper = "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210x.70220"
+
+[tool.setuptools.packages.find]
+include = ["bsg_bats_fr*"]
