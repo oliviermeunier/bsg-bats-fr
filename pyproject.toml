@@ -25,6 +25,9 @@ dependencies = [
     "numpy>=1.24",
     "librosa>=0.10",
     "resampy>=0.4",
+    # matplotlib is imported at module load time by the upstream BSG-BATS
+    # data384.py (for plotting helpers we do not use). Required for import.
+    "matplotlib>=3.7",
 ]
 
 [project.scripts]
